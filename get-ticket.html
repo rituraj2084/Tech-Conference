@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khand&family=Lobster&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tech Conference</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="get-ticket-header">
+        <header>
+          <nav>
+            <a href="#home"
+              ><img
+                src="./assets/images/logos/get-ticket-logo.svg"
+                alt="logo"
+                class="logo"
+            /></a>
+            <ul>
+              <li><a href="./index.html#home">Home</a></li>
+              <li><a href="./index.html#about">About</a></li>
+              <li><a href="./index.html#schedules">Schedules</a></li>
+              <li><a href="./index.html#speakers">Speakers</a></li>
+              <li><a href="./index.html#info">Info</a></li>
+              <li><a href="./index.html#sponsors">Sponsors</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div>
+          </nav>
+        </header>
+      </section>
+      <section class="get-ticket-title">
+        <div class="get-ticket-title-container">
+          <h1>The Inspire Summit</h1>
+          <p>HITEX Exhibition Center   •   July 22 | 5PM</p>
+        </div>
+        <div class="get-ticket-wrapper">
+          <div class="get-ticket-details-container">
+            <form action="checkout.html" method="get" target="_blank">
+              <div class="ticket-details">
+                <div class="left">
+                  <h2 class="ticket-title">PHASE 1-SILVER</h2>
+                  <p class="ticket-description">
+                    This ticket grants entry to one person into the Silver
+                    section(Standing only)
+                  </p>
+                </div>
+                <div class="right">
+                  <h2 class="price">Rs. 999 x</h2>
+                  <input
+                    type="number"
+                    name="silver-qty"
+                    value="0"
+                    class="input-quantity"
+                    min="0"
+                    data-price="999"
+                    onchange="calculateTotal()"
+                  />
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div class="left">
+                  <h2 class="ticket-title">PHASE 1-GOLD</h2>
+                  <p class="ticket-description">
+                    This ticket grants entry to one person into the Gold
+                    section(Standing only)
+                  </p>
+                </div>
+                <div class="right">
+                  <h2 class="price">Rs. 1499 x</h2>
+                  <input
+                    type="number"
+                    name="gold-qty"
+                    value="0"
+                    class="input-quantity"
+                    min="0"
+                    data-price="1499"
+                    onchange="calculateTotal()"
+                  />
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div class="left">
+                  <h2 class="ticket-title">PHASE 1-FANPIT</h2>
+                  <p class="ticket-description">
+                    This ticket grants entry to one person into the Fanpit
+                    section(Standing only)
+                  </p>
+                </div>
+                <div class="right">
+                  <h2 class="price">Rs. 2499 x</h2>
+                  <input
+                    type="number"
+                    name="fanpit-qty"
+                    value="0"
+                    class="input-quantity"
+                    min="0"
+                    data-price="2499"
+                    onchange="calculateTotal()"
+                  />
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div class="left">
+                  <h2 class="ticket-title">
+                    GOLD TABLE (4-6PAX) | STANDING COCKTAIL TABLE
+                  </h2>
+                  <p class="ticket-description">
+                    2 BOTTLES OF PREMIUM LIQUOR (WHISKY/VODKA) <br />
+                    12 BEERS, UNLIMITED CHASERS. <br />
+                    2 VEG/ 2 NON VEG STARTERS, ELEVATED STAGE <br />
+                    HASSLE FREE ENTRY. 2 SPECIAL CAR PARKING PASSES, <br />
+                    DEDICATED RESTROOMS. SECURITY AND SERVICE.
+                  </p>
+                </div>
+                <div class="right">
+                  <h2 class="price">Rs. 50000 x</h2>
+                  <input
+                    type="number"
+                    name="gold-table-qty"
+                    value="0"
+                    class="input-quantity"
+                    min="0"
+                    data-price="50000"
+                    onchange="calculateTotal()"
+                  />
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div class="left">
+                  <h2 class="ticket-title">
+                    DIAMOND TABLE (6-8 PAX) | SEATING SOFA
+                    <span>Few Tickets Left</span>
+                  </h2>
+                  <p class="ticket-description">
+                    3 BOTTLES OF PREMIUM LIQUOR (WHISKY/VODKA) <br />
+                    18 BEERS, UNLIMITED CHASERS, <br />
+                    2 VEG/2 NON VEG STARTERS, ELEVATED STAGE <br />
+                    HASSLE FREE ENTRY, 3 SPECIAL CAR PARKING PASSES, <br />
+                    DEDICATED RESTROOMS, SECURITY AND SERVICE
+                  </p>
+                </div>
+                <div class="right">
+                  <h2 class="price">Rs. 85000 x</h2>
+                  <input
+                    type="number"
+                    name="diamond-table-qty"
+                    value="0"
+                    class="input-quantity"
+                    min="0"
+                    data-price="85000"
+                    onchange="calculateTotal()"
+                  />
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div class="left">
+                  <h3>Total</h3>
+                </div>
+                <div class="right">
+                  <h3 class="price" id="total">Rs. 0</h3>
+                </div>
+              </div>
+              <button
+                class="checkout-button"
+                type="submit"
+                onclick="checkout()"
+                disabled
+              >
+                Checkout
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li>
+            <a href="http://facebook.com" target="_blank">
+              <img src="./assets/images/icons/facebook.png" alt="facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="http://twitter.com" target="_blank">
+              <img src="./assets/images/icons/twitter.png" alt="twitter"
+            /></a>
+          </li>
+          <li><p>2023 by Women of Tech. Powered</p></li>
+        </ul>
+      </footer>
+
+      <script src="./js/script.js"></script>
+    </div>
+  </body>
+</html>

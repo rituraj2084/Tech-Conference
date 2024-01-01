@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khand&family=Lobster&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tech Conference</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="get-ticket-header">
+        <header>
+          <nav>
+            <a href="#home"
+              ><img
+                src="./assets/images/logos/get-ticket-logo.svg"
+                alt="logo"
+                class="logo"
+            /></a>
+            <ul>
+              <li><a href="./index.html#home">Home</a></li>
+              <li><a href="./index.html#about">About</a></li>
+              <li><a href="./index.html#schedules">Schedules</a></li>
+              <li><a href="./index.html#speakers">Speakers</a></li>
+              <li><a href="./index.html#info">Info</a></li>
+              <li><a href="./index.html#sponsors">Sponsors</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div>
+          </nav>
+        </header>
+      </section>
+
+      <section class="checkout-main">
+        <div class="checkout-main-container">
+          <div class="personal-details">
+            <h4>Add your Details</h4>
+            <div class="form-container">
+              <form action="">
+                <div class="checkout-row">
+                  <div class="col-50">
+                    <label for="first-name">*First Name</label>
+                    <input
+                      type="text"
+                      class="checkout-input"
+                      name="first-name"
+                      required
+                    />
+                  </div>
+                  <div class="col-50">
+                    <label for="last-name">*Last Name</label>
+                    <input
+                      type="text"
+                      class="checkout-input"
+                      name="last-name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="checkout-row">
+                  <label for="email">*Email</label>
+                  <input
+                    type="email"
+                    class="checkout-input-email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <a href="" class="continue-button">Continue</a>
+              </form>
+            </div>
+          </div>
+          <div class="booking-details">
+            <h4>THE INSPIRE SUMMIT</h4>
+            <hr />
+            <p>Apr 18, 2035, 8:30 AM <br />HITEX Exhibition Center</p>
+            <hr />
+            <!-- <div>
+              <p>Phase 1- Gold</p>
+              <p>Price: Rs. 1499.00</p>
+              <div class="checkout-rupees">
+                <p>Qty: 1</p>
+                <p>Rs. 1499.00</p>
+              </div>
+            </div>
+            <hr />
+
+            <div>
+              <p>Phase 1- Gold</p>
+              <p>Price: Rs. 1499.00</p>
+              <div class="checkout-rupees">
+                <p>Qty: 1</p>
+                <p>Rs. 1499.00</p>
+              </div>
+            </div>
+            <hr />
+
+            <div class="checkout-rupees">
+              <p>Subtotal</p>
+              <p>Rs. 3497.00</p>
+            </div>
+            <div class="checkout-rupees">
+              <p>Service fee</p>
+              <p>Rs. 100.00</p>
+            </div>
+            <hr />
+            <div class="checkout-rupees">
+              <p>Total</p>
+              <p>Rs. 3597.00</p>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
